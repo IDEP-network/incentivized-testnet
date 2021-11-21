@@ -1,4 +1,4 @@
-# incentivized-testnet
+# Incentivized-testnet Sanford
 
 # Submitting your wallet #
 
