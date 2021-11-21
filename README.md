@@ -11,7 +11,7 @@ This is the only way to receive your validator funds and initialize your validat
 
 ## NOTE:
 ❗❗❗ All official incentivized testnet participants, make sure you do **NOT** transfer any of your tokens to another wallet address,
-doing so will disqualify you from the event ❗❗❗❗
+doing so will disqualify you from the event ❗❗❗
 
 # Contacts #
 For any further questions speak to the team on our [Discord](https://discord.gg/Jrarctk4hG)
