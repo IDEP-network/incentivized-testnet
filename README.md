@@ -6,7 +6,7 @@ All confirmed Sanford Testnet participants please join our official [Discord](ht
 After you initiate your wallet.   
 Make your way to 👛-confirm-wallet  (if you dont have access to this channel you have not been selected, sorry)
 Paste your public wallet address along with tagging denny007#3282 and Aidas#1949. (Please do this once only)   
-This is the only way to receive your validator funds, and initialize your validator this *must* be done in order to participate in the incentivized testnet.
+This is the only way to receive your validator funds and initialize your validator. This *must* be done in order to participate in the incentivized testnet.
 
 
 ## NOTE:
