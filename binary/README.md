@@ -8,7 +8,7 @@
 ```
 export MONIKER=<YOUR_MONIKER>
 export WALLETNAME=<YOUR_WALLET_NAME>
-export CHAIN_ID=tbd
+export CHAIN_ID=SanfordNetwork
 export USERNAME=$(whoami)
 ```
 
