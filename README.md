@@ -2,9 +2,9 @@
 
 # Requirements #
 * Latest Version of Ubuntu
-* 4 CPU Processor
-* 8 GB Ram
-* 500GB Storage
+* 2 CPU Processor
+* 4 GB Ram
+* 150 GB Storage
 
 ### Incentivized-testnet Sanford is utilizing Cosmos version 0.44.2
 
