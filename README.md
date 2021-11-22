@@ -6,7 +6,7 @@
 * 8 GB Ram
 * 500GB Storage
 
-Incentivized-testnet Sanford is utilizing Cosmos version 0.44.2
+### Incentivized-testnet Sanford is utilizing Cosmos version 0.44.2
 
 # Submitting your wallet #
 
