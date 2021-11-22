@@ -20,11 +20,11 @@ git clone https://github.com/IDEP-network/incentivized-testnet.git
 
 - Add permissions to the binary
 ```
-sudo chmod +x /testnet-binaries/binary/iond
+sudo chmod +x incentivized-testnet/binary/iond
 ```
 - Move/Copy the binary to /usr/local/bin/
 ```
-cp testnet-binaries/binary/iond /usr/local/bin/
+cp incentivized-testnet/binary/iond /usr/local/bin/
 ```
 
 - Check the binary commands with
