@@ -65,7 +65,7 @@ After=network-online.target
 
 [Service]
 User=$USERNAME
-ExecStart=/home/$USERNAME/go/bin/iond start
+ExecStart=/usr/local/bin/iond start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
