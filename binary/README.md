@@ -46,7 +46,7 @@ sed -i.bak -e "s/^external_address = \"\"/external_address = \"$external_address
 ```
 - Add seeds and persistent_peers to config.toml
 ```
-sed -i.bak -e "s/^seeds *=.*/seeds = \"$(curl -s https://raw.githubusercontent.com/IDEP-network/incentivized-testnet/main/binary/seeds.txt | tr '\n' ', ' | sed 's/,$//')\"/; s/^persistent_peers *=.*/persistent_peers = \"$(curl -s https://raw.githubusercontent.com/IDEP-network/incentivized-testnet/main/binary/persistent_peers.txt | tr '\n' ', ' | sed 's/,$//')\"/" $HOME/.ion/config/config.toml
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$(curl -s https://raw.githubusercontent.com/IDEP-network/incentivized-testnet/main/binary/seeds.md | tr '\n' ', ' | sed 's/,$//')\"/; s/^persistent_peers *=.*/persistent_peers = \"$(curl -s https://raw.githubusercontent.com/IDEP-network/incentivized-testnet/main/binary/persistent_peers.txt | tr '\n' ', ' | sed 's/,$//')\"/" $HOME/.ion/config/config.toml
 ```
 - Next make your way to the nodes config directory, remove the genesis.json and replace it with the one provided in this repo
 ```
