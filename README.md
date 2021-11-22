@@ -1,5 +1,13 @@
 # Incentivized-testnet Sanford
 
+# Requirements #
+* Latest Version of Ubuntu
+* 4 CPU Processor
+* 8 GB Ram
+* 500GB Storage
+
+Incentivized-testnet Sanford is utilizing Cosmos version 0.44.2
+
 # Submitting your wallet #
 
 All confirmed Sanford Testnet participants please join our official [Discord](https://discord.gg/Jrarctk4hG) here.  
