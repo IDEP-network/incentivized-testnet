@@ -4,9 +4,9 @@
 * Latest Version of Ubuntu
 * 2 CPU Processor
 * 4 GB Ram
-* 150 GB Storage
+* 1 TB Storage
 
-### Incentivized-testnet Sanford is utilizing Cosmos version 0.44.2
+### Incentivized-testnet Sanford is utilizing Cosmos version 0.44.5
 
 # Submitting your wallet #
 
