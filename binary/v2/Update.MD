@@ -2,7 +2,7 @@
 #Cosmovisor setup for IDEP Network
 </p>
 
-##Installation
+## Installation
 
 `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest`
 
