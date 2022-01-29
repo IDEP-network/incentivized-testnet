@@ -6,31 +6,19 @@ Cosmovisor setup for IDEP Network
 
 `go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@latest`
 
-
 ### Your installation can be confirmed with
 
 `which cosmovisor`
 
-### Add environment variables to your shell
-In the .profile file, usually located at ~/.profile, add:
+### Set variables
 
 ```
-export DAEMON_NAME=iond
-export DAEMON_HOME=$HOME/.ion
-export DAEMON_RESTART_AFTER_UPGRADE=true
+DAEMON_NAME=iond
+DAEMON_HOME=$HOME/.ion
 ```
-
-Then source your profile to have access to these variables:
-
-`source ~/.profile`
-
-You can confirm success like so:
-
-`echo $DAEMON_NAME`
-
-It should return iond
 
 ## Set up folder structure
+
 Cosmovisor expects a certain folder structure:
 ```
 .  
@@ -60,17 +48,51 @@ chmod +x iond
 ## Install Wasmvm dependency
 ```
 go get -u github.com/CosmWasm/wasmvm@v1.0.0-beta4
-cd $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0-beta4/api
+cd $HOME/go/pkg/mod/github.com/\!cosm\!wasm/wasmvm@v1.0.0-beta4/api
 chmod +x libwasmvm.so
 ```
 
-### Add in ~/.bashrc
-`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/go/pkg/mod/github.com/\!cosm\!wasm/wasmvm@v1.0.0-beta4/api`
+### Add LD_LIBRARY_PATH
+```
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/go/pkg/mod/github.com/\!cosm\!wasm/wasmvm@v1.0.0-beta4/api" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
 
 ### Stop existing node instance
 
-## Start Cosmovisor
-`cosmovisor start`
+`sudo systemctl stop iond`
 
+### Backup current service
 
+`mv /etc/systemd/system/iond.service /etc/systemd/system/iond_backup.service`
+
+## Recreate service with Cosmovisor
+```
+sudo tee /etc/systemd/system/iond.service > /dev/null <<EOF  
+[Unit]
+Description=iond cosmovisor
+After=network-online.target
+[Service]
+User=$USER
+ExecStart=$(which cosmovisor) start
+Restart=on-failure
+RestartSec=10
+LimitNOFILE=65535
+Environment="DAEMON_HOME=$HOME/.ion"
+Environment="DAEMON_NAME=iond"
+Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
+Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
+Environment="UNSAFE_SKIP_BACKUP=true"
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+### Run service
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable iond
+sudo systemctl restart iond && journalctl -u iond -f
+```
 
