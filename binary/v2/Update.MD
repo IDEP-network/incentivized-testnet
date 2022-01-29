@@ -14,10 +14,11 @@
 ### Add environment variables to your shell
 In the .profile file, usually located at ~/.profile, add:
 
-
-`export DAEMON_NAME=iond`<br />
-`export DAEMON_HOME=$HOME/.ion`<br />
-`export DAEMON_RESTART_AFTER_UPGRADE=true`<br />
+```
+export DAEMON_NAME=iond
+export DAEMON_HOME=$HOME/.ion
+export DAEMON_RESTART_AFTER_UPGRADE=true
+```
 
 Then source your profile to have access to these variables:
 
@@ -45,21 +46,23 @@ Cosmovisor expects a certain folder structure:
 
 Don't worry about current - that is simply a symlink used by Cosmovisor.
 The other folders will need setting up, but this is easy:
-
-`mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin`<br />
-`mkdir -p $DAEMON_HOME/cosmovisor/upgrades/phase2/bin`<br />
-`cd $DAEMON_HOME/cosmovisor/genesis/bin`<br />
-`wget https://github.com/IDEP-network/incentivized-testnet/raw/main/binary/iond`<br />
-`chmod +x iond`
-`cd $DAEMON_HOME/cosmovisor/upgrades/phase2/bin`<br />
-`wget https://github.com/IDEP-network/incentivized-testnet/raw/main/binary/v2/iond`<br />
-`chmod +x iond`
+```
+mkdir -p $DAEMON_HOME/cosmovisor/genesis/bin
+mkdir -p $DAEMON_HOME/cosmovisor/upgrades/phase2/bin
+cd $DAEMON_HOME/cosmovisor/genesis/bin
+wget https://github.com/IDEP-network/incentivized-testnet/raw/main/binary/iond
+chmod +x iond
+cd $DAEMON_HOME/cosmovisor/upgrades/phase2/bin
+wget https://github.com/IDEP-network/incentivized-testnet/raw/main/binary/v2/iond
+chmod +x iond
+```
 
 ## Install Wasmvm dependency
-
-`go get -u github.com/CosmWasm/wasmvm@v1.0.0-beta4`<br />
-`cd $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0-beta4/api`<br />
-`chmod +x libwasmvm.so`<br />
+```
+go get -u github.com/CosmWasm/wasmvm@v1.0.0-beta4
+cd $HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0-beta4/api
+chmod +x libwasmvm.so
+```
 
 ### Add in ~/.bashrc
 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0-beta4/api`
