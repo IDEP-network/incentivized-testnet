@@ -65,7 +65,7 @@ chmod +x libwasmvm.so
 ```
 
 ### Add in ~/.bashrc
-`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/go/pkg/mod/github.com/!cosm!wasm/wasmvm@v1.0.0-beta4/api`
+`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/go/pkg/mod/github.com/\!cosm\!wasm/wasmvm@v1.0.0-beta4/api`
 
 ### Stop existing node instance
 
