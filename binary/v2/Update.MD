@@ -31,7 +31,7 @@ It should return iond
 
 ## Set up folder structure
 Cosmovisor expects a certain folder structure:
-
+```
 .  
 ├── current -> genesis or upgrades/<name>  
 ├── genesis  
@@ -40,7 +40,8 @@ Cosmovisor expects a certain folder structure:
 └── upgrades  
 └── (name)  
 └── bin  
-└── $DAEMON_NAME  
+└── $DAEMON_NAME
+```
 
 Don't worry about current - that is simply a symlink used by Cosmovisor.
 The other folders will need setting up, but this is easy:
