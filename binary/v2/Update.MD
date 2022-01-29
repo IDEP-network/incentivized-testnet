@@ -1,6 +1,6 @@
-<p align="center">
-#Cosmovisor setup for IDEP Network
-</p>
+<h1 align="center">
+Cosmovisor setup for IDEP Network
+</h1>
 
 ## Installation
 
